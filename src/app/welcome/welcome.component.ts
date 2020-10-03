@@ -8,16 +8,18 @@ import { DataService } from '../services/data.service';
   styleUrls: ['./welcome.component.css']
 })
 export class WelcomeComponent implements OnInit {
- username;
+ 
   constructor(public dataservice:DataService, private router:Router) { }
 
   ngOnInit(): void {
   }
+  username="";
+  authkey="";
  logout() {
-  this.router.navigateByUrl("");
-  //  this.dataservice.logout()
-  //  .subscribe(data => {
-  //    this.router.navigateByUrl("");
-  //  });
+  // this.router.navigateByUrl("");
+   this.dataservice.logout(this.username, this.authkey)
+   .subscribe(data => {
+     this.router.navigateByUrl("");
+   });
  }
 }
