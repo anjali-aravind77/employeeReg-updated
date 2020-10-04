@@ -11,9 +11,6 @@
       </div>
       <form [formGroup]="registerForm" (ngSubmit)="employeeregister()">
       <div class="jumbotron jumbo-color">
-          <!-- {{name}}
-          {{accno}}
-          {{pwd}} -->
           <div class="form-group">
               <label for="nameid">Name</label>
               <input formControlName="username" type="text" name="username" class="form-control" id="nameid" aria-describedby="emailHelp">
@@ -22,7 +19,7 @@
       
           <div class="form-group">
             <label for="pwd">Password</label>
-            <input formControlName="password" type="password" name="password" class="form-control" id="pwd1">
+            <input formControlName="password" type="password" name="password" class="form-control" id="pwd">
          
           <div *ngIf="getError('password')" class="error"> password is required </div> </div>
 
