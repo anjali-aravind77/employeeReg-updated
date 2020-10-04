@@ -18,7 +18,7 @@ export class DataService {
     const data = {
       username,password,empid,name,email,phone,designation,address
     }
-    return this.http.post(this.apiHost + "employeeregister", data);
+    return this.http.post(this.apiHost + "/employeeregister", data);
     
   }
 
@@ -26,7 +26,7 @@ export class DataService {
     const data = {
       username, password
     }
-    return this.http.post(this.apiHost +  "login", data, options);
+    return this.http.post(this.apiHost +  "/login", data, options);
     
   }
   logout(username, authkey) {
@@ -34,6 +34,6 @@ export class DataService {
       username, authkey
     }
     
-    return this.http.post( this.apiHost +  "logout", data, options);
+    return this.http.post( this.apiHost +  "/logout", data, options);
   }
 }
